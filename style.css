@@ -1,0 +1,638 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/fonts/Gilroy/Gilroy-ExtraBold.eot');
+    src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'),url('assets/fonts/Gilroy/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'),url('assets/fonts/Gilroy/Gilroy-ExtraBold.woff') format('woff'),url('assets/fonts/Gilroy/Gilroy-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/fonts/Gilroy/Gilroy-Heavy.eot');
+    src: local('Gilroy Heavy'), local('Gilroy-Heavy'),url('assets/fonts/Gilroy/Gilroy-Heavy.eot?#iefix') format('embedded-opentype'),url('assets/fonts/Gilroy/Gilroy-Heavy.woff') format('woff'),url('assets/fonts/Gilroy/Gilroy-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/fonts/Gilroy/Gilroy-SemiBold.eot');
+    src: local('Gilroy SemiBold'), local('Gilroy-SemiBold'),url('assets/fonts/Gilroy/Gilroy-SemiBold.eot?#iefix') format('embedded-opentype'),url('assets/fonts/Gilroy/Gilroy-SemiBold.woff') format('woff'),url('assets/fonts/Gilroy/Gilroy-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/fonts/Gilroy/Gilroy-Light.eot');
+    src: local('Gilroy Light'), local('Gilroy-Light'),url('assets/fonts/Gilroy/Gilroy-Light.eot?#iefix') format('embedded-opentype'),url('assets/fonts/Gilroy/Gilroy-Light.woff') format('woff'),url('assets/fonts/Gilroy/Gilroy-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/fonts/Gilroy/Gilroy-Regular.eot');
+    src: local('Gilroy Regular'), local('Gilroy-Regular'),url('assets/fonts/Gilroy/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),url('assets/fonts/Gilroy/Gilroy-Regular.woff') format('woff'),url('assets/fonts/Gilroy/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/fonts/Gilroy/Gilroy-Medium.eot');
+    src: local('Gilroy Medium'), local('Gilroy-Medium'),url('assets/fonts/Gilroy/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),url('assets/fonts/Gilroy/Gilroy-Medium.woff') format('woff'),url('assets/fonts/Gilroy/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/fonts/Gilroy/Gilroy-UltraLight.eot');
+    src: local('Gilroy UltraLight'), local('Gilroy-UltraLight'),url('assets/fonts/Gilroy/Gilroy-UltraLight.eot?#iefix') format('embedded-opentype'),url('assets/fonts/Gilroy/Gilroy-UltraLight.woff') format('woff'),url('assets/fonts/Gilroy/Gilroy-UltraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/fonts/Gilroy/Gilroy-Bold.eot');
+    src: local('Gilroy Bold'), local('Gilroy-Bold'),url('assets/fonts/Gilroy/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),url('assets/fonts/Gilroy/Gilroy-Bold.woff') format('woff'),url('assets/fonts/Gilroy/Gilroy-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/fonts/Gilroy/Gilroy-Thin.eot');
+    src: local('Gilroy Thin'), local('Gilroy-Thin'),url('assets/fonts/Gilroy/Gilroy-Thin.eot?#iefix') format('embedded-opentype'),url('assets/fonts/Gilroy/Gilroy-Thin.woff') format('woff'),url('assets/fonts/Gilroy/Gilroy-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+html {
+    font-size: 20px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    font-family: 'Gilroy', sans-serif;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+
+section.hero {
+    background-image: url("assets/images/author.png"), url("assets/images/hero-bg.webp");
+    background-repeat: no-repeat;
+    background-size: 55% 90%, 100% 100%;
+    background-position: bottom right, center;
+    position: relative;
+    padding: 25px 75px;
+}
+section.hero .content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+section.hero > .author-wrapper {
+    position: absolute;
+    z-index: 1000;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 98%;
+    background-image: url("assets/images/author.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+}
+section.hero .content > .top {
+    display: flex;
+    align-items: center;
+}
+section.hero .top > .line {
+    width: 100%;
+    height: .1rem;
+    background: #FFFFFF;
+}
+section.hero .tooltip-wrapper {
+    display: flex;
+    width: fit-content;
+    position: relative;
+    border: .1rem solid #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    flex: 1 auto;
+    border-radius: 50px;
+    padding: 2px 6px;
+    box-shadow: 0px 3.038px 6.076px 3.797px rgba(216, 116, 144, 0.30);
+}
+section.hero .tooltip-wrapper > div:first-child {
+    padding: 5px 10px 5px 20px;
+    font-size: 2rem;
+    line-height: 120%;
+    font-weight: 600;
+}
+section.hero .tooltip-wrapper > div:last-child {
+    white-space: nowrap;
+    background: #FFFFFF;
+    color: #D87490;
+    border-radius: 75px;
+    line-height: 120%;
+    padding: 8px 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+section.hero .form-wrapper {
+    background: #D87490;
+    border-radius: 25px;
+    border: .15rem solid #FFFFFF;
+    height: fit-content;
+}
+section.hero .waitlist-form {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-family: 'Gilroy', sans-serif;
+    color: #fff;
+}
+
+section.hero .waitlist-form label {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Gilroy', sans-serif;
+    gap: 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+section.hero .waitlist-form input,
+section.hero .waitlist-form input:active {
+    width: 100%;
+    border-radius: 50px;
+    background: #FFFFFF;
+    border: none;
+    padding: 15px 50px 15px 18px;
+    color: #D87490;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+}
+input:focus {
+    outline: none;
+}
+section.hero .waitlist-form input:-webkit-autofill {
+    -webkit-text-fill-color: #D87490 !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+section.hero .waitlist-form input:-webkit-autofill,
+section.hero .waitlist-form input:-webkit-autofill:focus,
+section.hero .waitlist-form input:-webkit-autofill:hover {
+    -webkit-text-fill-color: #D87490 !important;
+    caret-color: #D87490;
+    transition: background-color 5000s ease-in-out 0s;
+}
+section.hero .waitlist-form input::placeholder {
+    color: #D87490;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    opacity: .4;
+}
+section.hero .waitlist-form label:nth-child(2) {
+    position: relative;
+}
+
+.submit-btn {
+    position: relative;
+    width: 100%;
+    background: #7E0213;
+    color: #FFFFFF;
+    padding: 15px 30px 15px 10px;
+    font-size: 1.7rem;
+    font-weight: 700;
+    font-family: 'Gilroy', sans-serif;
+    text-transform: uppercase;
+    border: .1rem solid #FFFFFF;
+    border-radius:  100px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.submit-btn .arrow,
+.submit-btn .checkmark{
+    width: 2.1rem;
+    height: 2.1rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submit-btn .arrow img,
+.submit-btn .checkmark img {
+    width: 100%;
+    height: 100%;
+}
+section.hero .submit-btn .checkmark {
+    display: none;
+}
+.loading {
+    --speed-of-animation: 0.9s;
+    --gap: 6px;
+    --first-color: #D87490;
+    --second-color: #D87490;
+    --third-color: #D87490;
+    --fourth-color: #D87490;
+    --fifth-color: #D87490;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 6px;
+    height: 100%;
+    margin: auto;
+}
+.loading.active,
+.checkmark.active {
+    display: flex !important;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.no-opacity {
+    opacity: 0;
+}
+.loading span {
+    width: 4px;
+    height: 50px;
+    background: var(--first-color);
+    animation: scale var(--speed-of-animation) ease-in-out infinite;
+}
+
+.loading span:nth-child(2) {
+    background: var(--second-color);
+    animation-delay: -0.8s;
+}
+
+.loading span:nth-child(3) {
+    background: var(--third-color);
+    animation-delay: -0.7s;
+}
+
+.loading span:nth-child(4) {
+    background: var(--fourth-color);
+    animation-delay: -0.6s;
+}
+
+.loading span:nth-child(5) {
+    background: var(--fifth-color);
+    animation-delay: -0.5s;
+}
+
+@keyframes scale {
+    0%, 40%, 100% {
+        transform: scaleY(0.05);
+    }
+
+    20% {
+        transform: scaleY(1);
+    }
+}
+
+section.hero .bottom-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 50000;
+    align-items: flex-end;
+}
+section.hero .bottom-content .left > .clue {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+section.hero .bottom-content > div {
+    width: fit-content;
+    padding: 25px;
+}
+.bottom-content .left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background: #FFFFFF;
+    border-radius: 25px;
+    border: .15rem solid #D87490;
+}
+.bottom-content .left * {
+    color: #D87490;
+}
+.bottom-content .left .info-list {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    border-radius: 12px;
+    background: rgba(216, 116, 144, 0.12);
+    padding: 10px;
+}
+.bottom-content .left .info-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.bottom-content .left .info-list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 7.5px;
+}
+.bottom-content .left .info-list li {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.bottom-content .left .info-list li p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+.bottom-content .left .info-list li img {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+.bottom-content .left .abs,
+.bottom-content .left .abs.bottom {
+    position: absolute;
+    left: -1.5rem;
+    top: -1rem;
+    width: 4rem;
+    height: 3rem;
+    background-image: url("assets/images/heart.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.bottom-content .left .abs.bottom {
+    width: 5rem;
+    height: 3.5rem;
+    left: calc(100% - 2rem);
+    top: calc(100% - 2rem);
+}
+section.hero .title div {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+section.hero .title div:first-child {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+}
+section.hero .title div:first-child > .highlight {
+    padding: 5px 20px;
+    border: .1rem solid #D87490;
+    border-radius: 50px;
+    background: #FFFFFF;
+    color: #D87490;
+    transform: rotate(-5deg);
+    font-size: 2.5rem;
+}
+section.hero .content > .description {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+br.mobile {
+    display: none;
+}
+@media only screen and (max-width: 3840px) {
+    html {
+        font-size: 34px;
+    }
+    section.hero {
+        padding: 75px 10vw;
+        background-size: 45% 90%, 100% 100%;
+    }
+    section.hero .content {
+        gap: 75px;
+    }
+    .bottom-content .left .info-list li {
+        gap: 10px;
+    }
+}
+@media only screen  and (max-width: 2559px) {
+    html {
+        font-size: 28px;
+    }
+    section.hero {
+        padding: 75px 7.5vw;
+        background-size: 50% 90%, 100% 100%;
+    }
+}
+@media only screen and (max-width: 1919px) {
+    html {
+        font-size: 22px;
+    }
+    section.hero {
+        padding: 75px 100px;
+    }
+    section.hero .content {
+        gap: 50px;
+    }
+}
+@media only screen and (max-width: 1599px) {
+    html {
+        font-size: 20px;
+    }
+    section.hero {
+        padding: 50px 75px;
+        background-size: 50% 90%, 100% 100%;
+    }
+}
+@media only screen and (max-width: 1365px) {
+    html {
+        font-size: 16px;
+    }
+    section.hero {
+        padding: 50px;
+    }
+    section.hero .waitlist-form label,
+    section.hero .waitlist-form {
+        gap: 15px;
+    }
+    section.hero .content > .description {
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    html {
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    html {
+        font-size: 11px;
+    }
+    section.hero {
+        padding: 25px 20px;
+    }
+    section.hero .tooltip-wrapper > div {
+        font-size: 1rem !important;
+    }
+    section.hero .tooltip-wrapper {
+        padding: 2px;
+    }
+    section.hero .title div:first-child {
+        gap: 5px;
+    }
+    section.hero .title div,
+    section.hero .title div:first-child > .highlight {
+        font-size: 1.7rem;
+    }
+    section.hero .title div:first-child > .highlight {
+        padding: 5px 10px;
+    }
+    section.hero .content {
+        gap: 25px;
+    }
+    section.hero .content > .description {
+        width: 70%;
+        font-size: 1rem;
+    }
+    section.hero .bottom-content > div {
+        padding: 15px;
+        gap: 10px;
+    }
+    .bottom-content .left .info-list {
+        padding: 10px;
+        margin-right: 10px;
+    }
+    .bottom-content .left .info-list ul {
+        gap: 5px;
+    }
+    .bottom-content .left .info-list li {
+        gap: 5px;
+    }
+    section.hero .content > .bottom-content .form-wrapper {
+        border-radius: 14px;
+        padding: 15px 20px;
+    }
+    section.hero .form-wrapper,
+    section.hero .waitlist-form{
+        width: 100%;
+    }
+    section.hero .waitlist-form input, section.hero .waitlist-form input:active {
+        padding: 5px 10px;
+    }
+    .submit-btn {
+        font-size: 1.2rem;
+        padding: 7.5px 15px 7.5px 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 16px;
+    }
+    br.mobile {
+        display: block;
+    }
+    section.hero {
+        height: auto;
+        padding: 35px 10px 25px 10px;
+        overflow: hidden;
+        background-image: url("assets/images/bg-author-mobile.png"), url("assets/images/hero-bg-mobile.png");
+        background-size: 60% 50%, 100% 100%;
+        background-position: 100% 65%, center;
+    }
+    .bottom-content .left .abs {
+        left: -1.5rem;
+        top: -1.5rem;
+    }
+    section.hero .author-wrapper {
+        width: 75%;
+        bottom: 30%;
+        right: -10%;
+    }
+    section.hero .title div {
+        padding: 2px 0;
+    }
+    section.hero .tooltip-wrapper > div {
+        font-size: 1rem !important;
+    }
+    section.hero .tooltip-wrapper > div:first-child {
+        padding: 5px;
+    }
+    section.hero .tooltip-wrapper > div:last-child {
+        padding: 5px 10px;
+    }
+    section.hero .tooltip-wrapper {
+        padding: 2px;
+    }
+    section.hero .title div:first-child {
+        gap: 5px;
+    }
+    section.hero .title div,
+    section.hero .title div:first-child > .highlight {
+        font-size: 1.8rem;
+    }
+    section.hero .title div:first-child > .highlight {
+        padding: 5px 10px;
+    }
+    section.hero .content {
+        gap: 25px;
+    }
+    section.hero .bottom-content {
+        flex-direction: column;
+        gap: 25px;
+        align-items: flex-start;
+    }
+    section.hero .content > .description {
+        width: 60%;
+        font-size: 1rem;
+    }
+    section.hero .bottom-content > div {
+        padding: 10px;
+        gap: 10px;
+    }
+    .bottom-content .left .info-list {
+        padding: 5px;
+        margin-right: 10px;
+    }
+    .bottom-content .left .info-list ul {
+        gap: 5px;
+    }
+    section.hero .bottom-content .left > .clue,
+    .bottom-content .left .info-title {
+        font-size: .7rem;
+    }
+    .bottom-content .left .info-list li {
+        gap: 5px;
+    }
+    .bottom-content .left .info-list li p {
+        font-size: .6rem;
+    }
+    .bottom-content .left .info-list li img {
+        width: .8rem;
+        height: .8rem;
+    }
+    section.hero .content > .bottom-content .form-wrapper {
+        border-radius: 14px;
+        padding: 15px 20px;
+        width: 100%;
+    }
+    section.hero .form-wrapper,
+    section.hero .waitlist-form{
+        width: 100%;
+    }
+    section.hero .waitlist-form input, section.hero .waitlist-form input:active {
+        padding: 5px 10px;
+    }
+    .submit-btn {
+        font-size: 1.2rem;
+        padding: 7.5px 15px 7.5px 10px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    html {
+        font-size: 14px;
+    }
+}
