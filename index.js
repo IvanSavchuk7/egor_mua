@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     loader.classList.remove("active");
                     checkmark.classList.add("active");
                     setTimeout(() => {
-                        window.location.href = "https://t.me/+qMk3jBLEn3M3M2Ji";
+                        window.open("https://t.me/+qMk3jBLEn3M3M2Ji", "_blank");
                     }, 500);
                     submitBtn.classList.add("submitted");
                 }
