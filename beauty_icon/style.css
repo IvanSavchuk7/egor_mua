@@ -436,6 +436,10 @@ section.hero .bottom .right-inner div:last-child span:first-child {
         width: 4rem;
         height: 4rem;
     }
+    section.hero .pre-record > .inner {
+        padding: 1rem 1.25rem 1.25rem 1.25rem;
+        font-size: 1.75rem;
+    }
 }
 @media only screen and (max-width: 400px) {
     section.hero .description > div {
