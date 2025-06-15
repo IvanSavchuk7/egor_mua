@@ -172,7 +172,8 @@ section.hero .bottom > div {
     flex-direction: column;
     gap: 1.5rem;
 }
-section.hero .bottom .button {
+section.hero .bottom .button,
+section.offer .action .button{
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -186,10 +187,12 @@ section.hero .bottom .button {
     border-radius: 100px;
     height: fit-content;
 }
-section.hero .bottom .button > span {
+section.hero .bottom .button > span,
+section.offer .action .button > span {
     color: #FFFFFF;
 }
-section.hero .bottom .button > img {
+section.hero .bottom .button > img,
+section.offer .action .button > img {
     width: 2rem;
     height: 2rem;
 }
@@ -225,14 +228,191 @@ section.hero .bottom .right-inner div:last-child span:first-child {
     font-size: 1.2rem;
     background-color: #F25B92;
 }
+section.offer {
+    padding: 4rem 0 0 0;
+    background-image: url('assets/images/bg-star-4.svg');
+    background-repeat: no-repeat;
+    background-size: 15rem, 15rem;
+    background-position: 100% 0;
+}
+section.offer > div {
+    padding-right: 2rem;
+}
+section.offer .about {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+section.offer .about > .left {
+    flex: 4;
+}
+section.offer .about > .right {
+    flex: 3;
+}
+section.offer .about > .left > .title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: fit-content;
+}
+section.offer .about .title > div {
+    font-size: 2.8rem;
+}
+section.offer .about .title > div:first-child {
+    padding-left: 3.5rem;
+}
+section.offer .about .title > div:last-child {
+    text-align: right;
+    position: relative;
+    padding-right: 3rem;
+}
+section.offer .about .title > div:last-child::before {
+    content: '';
+    width: 10rem;
+    height: 3.5rem;
+    position: absolute;
+    right: 18rem;
+    background-image: url("assets/images/wow-icon.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+section.offer .about .tooltip {
+    display: flex;
+    padding-top: 2rem;
+    align-items: center;
+    gap: 2rem;
+}
+section.offer .about .tooltip img {
+    transform: scaleX(-1);
+    margin: 0 2rem;
+    width: 6rem;
+    height: 6rem;
+}
+section.offer .about .tooltip .text {
+    line-height: 120%;
+}
+section.offer .about .right .collage {
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+}
+section.offer .about .right .collage > div {
+    background: #FFFFFF;
+    position: relative;
+    z-index: 10;
+}
+section.offer .about .right .collage img {
+    z-index: 10;
+    position: relative;
+    background: #FFFFFF;
+    height: 15rem;
+    width: auto;
+    border: 1px solid rgba(29, 29, 29, 0.26);
+}
+section.offer .about .right .collage > div:last-child {
+    margin-top: 6rem;
+    z-index: 0;
+}
+section.offer .about .right .collage > div:last-child::after {
+    content: '';
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    left: -20%;
+    top: -45%;
+    background-image: url("assets/images/pink-star.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+section.offer .about .right.mobile {
+    display: none;
+}
+section.offer .form {
+    background-image: url("assets/images/expert-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 100% 100%;
+    padding-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+section.offer .form > .content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+section.offer .form > .content .action {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: #EBEBEB;
+    padding: 2rem;
+}
+section.offer .form > .content .action .abs {
+    position: absolute;
+    width: 20rem;
+    height: 10rem;
+    bottom: -3rem;
+    left: 55%;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+section.offer .form > .content .action .title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+section.offer .form > .content .action .title > div {
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+section.offer .action .button {
+    margin:0  5rem;
+}
+section.offer .form .description {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+section.offer .form .description .title {
+    padding: .5rem 3rem;
+    background: #1D1D1D;
+    color: #FFFFFF;
+    width: fit-content;
+    line-height: 120%;
+    font-size: 1.5rem;
+    position: relative;
+}
+section.offer .form .description .title .abs {
+    position: absolute;
+    width: 4.5rem;
+    height: 4.5rem;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+section.offer .form .description .text {
+    text-align: center;
+    font-size: 1.2rem;
+}
+section.offer .form img.mobile {
+    display: none;
+}
 
-
-@media screen and (min-width: 1441px) and (max-width: 3840px) {
+@media screen and (min-width: 2560px) and (max-width: 3840px) {
     html {
         font-size: 28px;
     }
     section.hero {
-        padding: 0 10rem 10rem 10rem;
+        padding: 0 10rem 5rem 10rem;
         min-height: auto;
     }
     section.hero .title {
@@ -250,10 +430,61 @@ section.hero .bottom .right-inner div:last-child span:first-child {
     section.hero .bottom br {
         display: none;
     }
+    section.offer .about {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+    section.offer .about .title > div {
+        font-size: 3rem;
+    }
+    section.offer .about .title > div:last-child {
+        padding: 0;
+    }
+    section.offer .about .title > div:last-child::before {
+        width: 10rem;
+        height: 4rem;
+        right: 17rem;
+    }
+    section.offer .about .tooltip {
+        padding-top: 3rem;
+    }
+    section.offer .about .tooltip img {
+        width: 7vw;
+        height: 7vw;
+    }
+    section.offer .about .tooltip .text {
+        font-size: 1.5rem;
+    }
+    section.offer .about .right .collage img {
+        height: 20rem;
+    }
+    section.offer .about .right .collage > div:last-child::after {
+        width: 15rem;
+        height: 15rem;
+        left: -15%;
+        top: -50%;
+    }
+    section.offer .form {
+        padding: 4rem 18vw 2rem 18vw;
+        background-position: 85% 100%;
+    }
+    section.offer .form > .content {
+        width: 60%;
+    }
+    section.offer .form > .content .action {
+        padding: 2rem 1.5rem;
+    }
+    section.offer .action .button {
+        margin: auto;
+        max-width: 670px;
+    }
 }
 @media only screen  and (max-width: 2559px) {
     html {
         font-size: 24px;
+    }
+    section.hero {
+        min-height: auto;
     }
     section.hero .bottom {
         margin: auto;
@@ -266,6 +497,19 @@ section.hero .bottom .right-inner div:last-child span:first-child {
     section.hero .title .abs {
         width: 50vw;
         left: 45%;
+    }
+    section.offer .about {
+        padding: 0 6rem;
+    }
+    section.offer .form {
+        padding: 4rem 12vw 2rem 12vw;
+        background-position: 85% 100%;
+    }
+    section.offer .action .button {
+        margin: 0 4rem;
+    }
+    section.offer .form > .content .action .title > div {
+        font-size: 2.2rem;
     }
 }
 @media only screen and (max-width: 1919px) {
@@ -287,6 +531,15 @@ section.hero .bottom .right-inner div:last-child span:first-child {
         width: 60vw;
         left: 45%;
     }
+    section.offer .about {
+        padding: 0 2.5rem;
+    }
+    section.offer .action .button {
+        margin: 0 2rem;
+    }
+    section.offer .form {
+        background-position: 95% 100%;
+    }
 }
 @media only screen and (max-width: 1599px) {
     html {
@@ -301,6 +554,16 @@ section.hero .bottom .right-inner div:last-child span:first-child {
     section.hero .bottom {
         width: 100%;
     }
+    section.offer .form {
+        background-position: 100% 100%;
+        padding: 0 2rem 3rem 0;
+    }
+    section.offer .action .button {
+        margin: 0 5rem;
+    }
+    section.offer .form {
+        padding: 4rem 2rem 2rem 2rem;
+    }
 }
 @media only screen and (max-width: 1365px) {
     html {
@@ -308,6 +571,12 @@ section.hero .bottom .right-inner div:last-child span:first-child {
     }
     section.hero {
         padding: 0 3rem 8rem 3rem;
+    }
+    section.offer .about .right .collage img {
+        height: 13rem;
+    }
+    section.offer .about .right .collage > div:last-child::after {
+        top: -55%;
     }
 }
 @media only screen and (max-width: 1100px) {
@@ -336,7 +605,8 @@ section.hero .bottom .right-inner div:last-child span:first-child {
     section.hero .bottom {
         gap: 1.5rem;
     }
-    section.hero .bottom .button {
+    section.hero .bottom .button,
+    section.offer .action .button {
         padding: .25rem 2rem .25rem 1.5rem;
         border: 7px solid #f8acc7;
     }
@@ -350,6 +620,125 @@ section.hero .bottom .right-inner div:last-child span:first-child {
     }
     section.hero .bottom .right-inner div:last-child span:first-child  {
         padding: 5px 8px;
+    }
+    section.offer .about {
+        flex-direction: column;
+    }
+    section.offer .about > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section.offer .about .right .collage > div {
+        width: 45%;
+    }
+    section.offer .about .right .collage img {
+        height: auto;
+        width: 100%;
+    }
+    section.offer .about .right .collage > div:last-child::after {
+        width: 25vw;
+        height: 25vw;
+        top: -45%;
+        left: -15%;
+    }
+    section.offer .about .right:not(.mobile) {
+        display: none;
+    }
+    section.offer .about .right.mobile {
+        margin-top: 6rem;
+    }
+    section.offer .about .title > div {
+        font-size: 3.5rem;
+    }
+    section.offer .about .title > div:last-child::before {
+        width: 10rem;
+        height: 3.5rem;
+        right: 21rem;
+    }
+    section.offer .about .tooltip {
+        position: relative;
+        padding-top: 8rem;
+    }
+    section.offer .about .tooltip img {
+        position: absolute;
+        left: 0;
+        top: -7rem;
+        z-index: 555;
+        width: 16rem;
+        height: 16rem;
+        margin: 0;
+    }
+    section.offer .about .tooltip .text {
+        font-size: 2.5rem;
+        padding: 0 10vw;
+        text-align: center;
+    }
+    section.offer .about .tooltip .text br {
+        display: none;
+    }
+    section.offer .form {
+        padding-top: 6rem;
+    }
+    section.offer .form {
+        background-position: 140% 100%;
+    }
+    section.offer .about .right.mobile {
+        display: block;
+    }
+    section.offer .about .right .collage {
+        justify-content: flex-start;
+        padding: 0 2rem;
+    }
+}
+@media only screen and (max-width: 950px) {
+    section.offer .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: none;
+        padding-left: 12vw;
+        padding-right: 12vw;
+        padding-bottom: 0;
+    }
+    section.offer .form > .content .action {
+        position: relative;
+    }
+    section.offer .form > .content .action .abs {
+        left: 105%;
+        top: -2.5rem;
+        width: 15rem;
+        height: 7.5rem;
+    }
+    section.offer .form img.mobile {
+        display: block;
+        margin-top: -1rem;
+    }
+    section.offer .form > .content > img:not(.mobile) {
+        display: none;
+    }
+    section.offer .form > .content {
+        width: 100%;
+    }
+    section.offer .form > .content .action .title > div {
+        font-size: 2.8rem;
+    }
+    section.offer .action .button {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    section.offer .form .description .title {
+        font-size: 2rem;
+    }
+    section.offer .form .description .text {
+        font-size: 1.5rem;
+    }
+    section.offer .form .description .title .abs {
+        width: 5rem;
+        height: 5rem;
+    }
+    section.offer .action .button > span {
+        font-size: 1.2rem;
     }
 }
 @media only screen and (max-width: 767px) {
@@ -408,11 +797,76 @@ section.hero .bottom .right-inner div:last-child span:first-child {
         height: 4rem;
         width: 4rem;
     }
-    section.hero .bottom .button {
+    section.hero .bottom .button,
+    section.offer .action .button {
         padding: .75rem 2.75rem .75rem 2.25rem;
         border: 10px solid #f8acc7;
     }
+    section.offer .about .title > div {
+        font-size: 3rem;
+    }
+    section.offer .about .title > div:last-child::before {
+        width: 8rem;
+        height: 3.5rem;
+        right: 19rem;
+    }
+    section.offer .form {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+    section.offer .form > .content .action .title > div {
+        font-size: 2.5rem;
+    }
+
+    section.offer .form > .content .action .abs {
+        left: 90%;
+        top: -4.5rem;
+        width: 15rem;
+        height: 7.5rem;
+    }
+    section.offer .form .description .title {
+        font-size: 1.75rem;
+    }
 }
+@media only screen and (max-width: 600px) {
+    section.offer .about .tooltip img {
+        left: 0;
+        top: -5rem;
+        width: 12rem;
+        height: 12rem;
+    }
+    section.offer .about .tooltip .text {
+        font-size: 2rem;
+        padding: 0 10vw;
+        text-align: center;
+    }
+    section.offer .about .title > div {
+        font-size: 2.5rem;
+    }
+    section.offer .about .title > div:last-child::before {
+        width: 7rem;
+        height: 3rem;
+        right: 16rem;
+    }
+    section.offer .about .title > div:first-child {
+        padding-left: 2.5rem;
+    }
+    section.offer .about .right .collage > div {
+        width: 50%;
+    }
+    section.offer .about .right .collage > div:last-child::after {
+        width: 30vw;
+        height: 30vw;
+    }
+    section.offer .form > .content .action {
+        padding: 1.5rem 1rem;
+    }
+    section.offer .form .description .text {
+        font-size: 1.25rem;
+    }
+
+}
+
 @media only screen and (max-width: 540px) {
     html {
         font-size: 14px;
@@ -423,6 +877,9 @@ section.hero .bottom .right-inner div:last-child span:first-child {
     section.hero .description .img {
         width: 5rem;
         height: 5rem;
+    }
+    section.offer .about .tooltip .text {
+        padding: 0 4vw;
     }
 }
 @media only screen and (max-width: 480px) {
@@ -441,13 +898,47 @@ section.hero .bottom .right-inner div:last-child span:first-child {
         font-size: 1.75rem;
     }
 }
+@media only screen and (max-width: 420px) {
+    section.offer .about .title > div {
+        font-size: 2.2rem;
+    }
+    section.offer .about .title > div:last-child::before {
+        width: 7rem;
+        height: 2.5rem;
+        right: 15rem;
+    }
+    section.offer .about .tooltip .text {
+        padding: 0;
+        font-size: 1.5rem;
+    }
+}
 @media only screen and (max-width: 400px) {
     section.hero .description > div {
         font-size: 1rem;
+    }
+    section.offer .form > .content .action .title > div {
+        font-size: 2.2rem;
+    }
+    section.offer .action .button {
+        margin: 0 1rem;
+    }
+    section.offer .form .description .title {
+        font-size: 1.35rem;
     }
 }
 @media only screen and (max-width: 360px) {
     html {
         font-size: 10px;
+    }
+    section.hero {
+        min-height: 600px;
+    }
+    section.offer .about .title > div {
+        font-size: 2rem;
+    }
+    section.offer .about .title > div:last-child::before {
+        width: 7rem;
+        height: 2.5rem;
+        right: 15rem;
     }
 }
