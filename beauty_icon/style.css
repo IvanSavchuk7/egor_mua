@@ -143,15 +143,6 @@ section.hero .title {
     position: relative;
     margin-bottom: calc(60vw / 4.4);
 }
-/*section.hero .title::before {*/
-/*    content: url('assets/images/title-icon.png');*/
-/*    height: auto;*/
-/*    width: 100%;*/
-/*    position: absolute;*/
-/*    display: block;*/
-/*    top: 45%;*/
-/*    left: -2rem;*/
-/*}*/
 section.hero .title .abs {
     width: 60vw;
     height: auto;
@@ -406,6 +397,45 @@ section.offer .form .description .text {
 section.offer .form img.mobile {
     display: none;
 }
+.marquee-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;         /* або фіксована ширина */
+    white-space: nowrap;
+}
+
+.marquee-text {
+    font-size: calc(100vw / 3.9);
+    animation: marquee 10s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.pulse {
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(248, 105, 158, 0.5);
+    }
+    70% {
+        transform: scale(1.03);
+        box-shadow: 0 0 0 1rem rgba(248, 105, 158, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(248, 105, 158, 0);
+    }
+}
 
 @media screen and (min-width: 2560px) and (max-width: 3840px) {
     html {
@@ -587,6 +617,9 @@ section.offer .form img.mobile {
         padding: 0 2rem 2rem 2rem;
         min-height: 700px;
         background-size: 12.5rem 12.5rem, 10rem, 10rem;
+    }
+    section.offer {
+        background-size:10rem, 10rem;
     }
     section.hero .title {
         font-size: calc(100vw / 3.9);
