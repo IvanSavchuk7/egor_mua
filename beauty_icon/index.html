@@ -55,7 +55,7 @@
           <div class="fixel-bold">Хочеш бути <br>серед перших?</div>
           <div class="fixel-regular">Встигни потрапити до списку <br>учасників ще до відкриття <br>набору!</div>
         </div>
-        <div class="button pulse"><span class="fixel-regular">ЗАРЕЄСТРУВАТИСЯ</span><img src="assets/images/arrow-white-2.svg" alt=""></div>
+        <div class="button pulse"><span class="fixel-semibold">ЗАРЕЄСТРУВАТИСЯ</span><img src="assets/images/arrow-white-2.svg" alt=""></div>
         <div class="right">
           <div class="fixel-bold">Реєструйся — і одразу отримай подарунки:</div>
           <div>
@@ -94,12 +94,13 @@
           </div>
         </div>
         <div class="right">
-          <div class="collage">
+          <div class="collage" id="collage">
             <div>
-              <img src="assets/images/collage-1.png" alt="">
+              <img src="assets/images/collage-1.png" alt="" class="left">
             </div>
             <div>
-              <img src="assets/images/collage-2.png" alt="">
+              <img src="assets/images/collage-2.png" alt="" class="right">
+              <img src="assets/images/pink-star.svg" alt="" class="abs right">
             </div>
           </div>
         </div>
@@ -113,7 +114,7 @@
               <div class="basenji-extralight">одразу отримуй</div>
               <div class="basenji-extralight">Кодекс Візажиста</div>
             </div>
-            <div class="button pulse"><span class="fixel-regular">ЗАРЕЄСТРУВАТИСЯ</span><img src="assets/images/arrow-white-2.svg" alt=""></div>
+            <div class="button pulse"><span class="fixel-semibold">ЗАРЕЄСТРУВАТИСЯ</span><img src="assets/images/arrow-white-2.svg" alt=""></div>
           </div>
           <div class="description">
             <div class="title fixel-regular">Новий Стандарт У Бʼюті: <img src="assets/images/abs-star.svg" alt="" class="abs"></div>
@@ -121,10 +122,37 @@
               Система створена на базі <span class="fixel-semibold">7 років <br>практики, 120 ревізій салонів краси та <br>роботи з найвідомішими українськими <br>зірками</span> та інфлюенсерами
             </div>
           </div>
-          <img src="assets/images/expert-bg.png" alt="" class="mobile">
+          <img src="assets/images/test.gif" alt="" class="mobile">
         </div>
       </div>
     </section>
   </main>
+  <script>
+    const collage = document.getElementById('collage');
+    let hasAnimated = false; // анімація спрацює лише один раз при появі
+    let intervalId;
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !hasAnimated) {
+          hasAnimated = true;
+
+          // Перша зміна місцями
+          collage.classList.toggle('switch');
+
+          // Потім таймер на наступні автоматичні зміни
+          setTimeout(() => {
+            intervalId = setInterval(() => {
+              collage.classList.toggle('switch');
+            }, 5000); // міняє місцями кожні 5 секунд після першої появи
+          }, 5000); // затримка 5 сек після першого анімування
+
+          observer.unobserve(collage); // спостереження більше не потрібно
+        }
+      });
+    }, { threshold: 0.5 }); // коли 50% блоку видно
+
+    observer.observe(collage);
+  </script>
 </body>
 </html>
